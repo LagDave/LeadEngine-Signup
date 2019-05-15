@@ -4,7 +4,7 @@
                 <p style="margin-bottom: 20px" class="text-montserrat text-bold text-white"><i class="fas fa-home"></i>
                     1730 M Sreet Northwest,</p>
                 <p style="margin-bottom: 20px" class="text-montserrat text-white">Downtown Washington,</p>
-                <p class="text-montserrat text-white">DC20036</p>
+                <p class="text-montserrat text-white">DC 20036</p>
             </div>
             <div>
                 <p style='margin-bottom: 20px' class="text-montserrat text-white"><i class="fas fa-phone"></i> 1- (253)

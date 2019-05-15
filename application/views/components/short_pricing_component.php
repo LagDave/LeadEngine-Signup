@@ -24,7 +24,7 @@
 
     <div class='pricing'>
         <p class="margin-0 text-montserrat text-center text-normal">PRO</p>
-        <p class="margin-0 text-barlow text-center text-medium">245/Month</p>
+        <p class="margin-0 text-barlow text-center text-medium">149/Month</p>
         <br>
         <div class="stats-table">
 

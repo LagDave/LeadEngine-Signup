@@ -34,7 +34,7 @@
 
         <div class='pricing'>
             <p class="margin-0 text-montserrat text-center text-normal">PRO</p>
-            <p class="margin-0 text-barlow text-center text-medium">245/Month</p>
+            <p class="margin-0 text-barlow text-center text-medium">149/Month</p>
             <br>
             <div class="stats-table">
 
@@ -128,7 +128,7 @@
             <p style="margin-bottom: 20px" class="text-montserrat text-bold text-white"><i
                     class="fas fa-home"></i> 1730 M Sreet Northwest,</p>
             <p style="margin-bottom: 20px" class="text-montserrat text-white">Downtown Washington,</p>
-            <p class="text-montserrat text-white">DC20036</p>
+            <p class="text-montserrat text-white">DC 20036</p>
         </div>
         <div>
             <p style='margin-bottom: 20px' class="text-montserrat text-white"><i class="fas fa-phone"></i> 1-

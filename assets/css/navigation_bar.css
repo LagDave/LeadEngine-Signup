@@ -47,9 +47,6 @@ nav .container .contacts {
 nav .container .contacts span{
 margin:0
 }
-nav .contacts a{
-  color:white !important;
-}
 .hamburger {
     justify-self: end;
     padding: 0;
