@@ -85,16 +85,12 @@
 
 <div class="testimonials">
 
-    <p class="title text-medium text-center text-barlow">REVIEW &amp; <span class="text-blue">TESTIMONIAL</span>
-    </p>
-
-
     <div class="container">
 
 
         <div class="testimonial">
 
-            <img src="assets/images/person3.png" class='testimonial-profile' alt="">
+            <img src="http://signup.leadengine.live/assets/images/person3.png" class='testimonial-profile' alt="">
             <p class="text-mednorm"><i class="text-blue fas fa-quote-right"></i></p>
 
             <p class="testimonial-content text-grey text-normal text-center text-montserrat">
