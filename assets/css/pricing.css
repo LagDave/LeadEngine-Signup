@@ -1,0 +1,159 @@
+.pricing_component {
+    height: 100vh;
+    background: #fafafa;
+    position: fixed;
+    top: 0;
+    transform: translateX(-7000px);
+    overflow: auto;
+    width: 100vw;
+    z-index: 9999999999999999999999999999;
+  }
+  .pricing_component .header {
+    background: #3d8fc2;
+    padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .pricing_component .header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing_component .header .container img {
+    width: 180px;
+  }
+  .pricing_component .header .container p {
+    margin-left: 10px;
+  }
+  .pricing_component .header button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 0;
+    font-size: 1.5em;
+    margin-left: auto;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .pricing_component .header button:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .pricing_component .pricing-con1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .pricing_component .pricing-con1 .text-mednorm {
+    background: #3d8fc2;
+    padding: 5px 0;
+  }
+  .pricing_component .pricing-con1 .price {
+    background: #3a88b8;
+    margin: 0;
+    padding: 30px 5px;
+  }
+  .pricing_component .pricing-con1 .price p {
+    margin: 0;
+  }
+  
+  .pricing_component .pricing-con2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding:20px 0;
+  }
+  .pricing_component .pricing-con2 .price {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: orange;
+  }
+  .pricing_component .pricing-con2 .attributes {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-right: 25px;
+  }
+.pricing_component .pricing-con2 .attributes p{
+  margin:0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+  .pricing_component .pricing-con2 .pricing {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: #3d8fc2;
+    justify-items: center;
+    align-content: center;
+    grid-gap: 10px;
+
+  }
+.pricing_component .pricing-con2 .pricing p{
+  padding: 15px;
+}
+  
+  .pricing_component .pricing-con3 {
+    display: none;
+  }
+  .pricing_component .pricing-con3 div {
+    margin-bottom: 20px;
+  }
+  .pricing_component .pricing-con3 div .text-medium {
+    background: #3d8fc2;
+    padding: 15px 0;
+  }
+  .pricing_component .pricing-con3 div .text-normal {
+    background: #3a88b8;
+    padding: 5px 0;
+  }
+  .pricing_component .pricing-con3 div .text-small {
+    padding: 5px 0;
+  }
+  .pricing_component .pricing-con3 div .text-small:nth-child(odd) {
+    background: #eee;
+  }
+  .pricing_component .testimonials .container{
+    grid-template-columns: 1fr !important;
+  }
+  .pricing_component .testimonials .testimonial .testimonial-content{
+    max-width: 600px;
+  }
+  @media (max-width: 960px) {
+    .pricing_component .pricing-con1,
+    .pricing_component .pricing-con2 {
+      display: none;
+    }
+    .pricing_component .pricing-con3 {
+      display: block;
+    }
+  }
+  
+  @keyframes componentShow {
+    0% {
+      transform: translateX(-7000px);
+    }
+    60% {
+      transform: translateX(100px);
+    }
+    70% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes componentHide {
+    0% {
+      transform: translateX(0px);
+    }
+    30% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(-7000px);
+    }
+  }
+  

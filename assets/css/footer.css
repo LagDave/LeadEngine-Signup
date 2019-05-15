@@ -1,0 +1,28 @@
+footer *{
+    margin:0;
+}
+footer{
+    background:#333;
+    padding:50px 0;
+}
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+@media(max-width: 980px){
+    footer .container{
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+
+    footer p.text-right{
+        text-align: left;
+    }
+    footer p{
+        margin:5px !important;
+    }
+    footer .text-dbl-line-height{
+        line-height: 20px;
+    }
+}
