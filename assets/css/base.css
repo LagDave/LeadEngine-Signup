@@ -119,6 +119,10 @@ button:focus {
 .btn-big{
   font-size: 1.3em;
 }
+.btn-sm{
+  font-size: .8em;
+  padding:5px 10px;
+}
 .btn:focus {
   outline: none;
 }

@@ -11,7 +11,9 @@ class Signup extends CI_Controller{
         $this->load->view('layouts/app', ['view'=>'pages/pricing_view', 'page_title'=>'LeadEngine | Pricing']);
     }
     public function validate(){
-        
+
+        print_r($this->input->post()) ;
+
         $this->form_validation->set_rules('first_name', 'First Name', 'required|trim');
         $this->form_validation->set_rules('last_name', 'Last Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email Address', 'required|trim');
@@ -24,6 +26,14 @@ class Signup extends CI_Controller{
 
         if($this->form_validation->run()){
 
+            $industries = '';
+            if(sizeof($this->input->post('industries_list')) > 0){
+                foreach($this->input->post('industries_list') as $industry){
+                    $industry = ucwords(str_replace('_', ' ', $industry));
+                    $industries .= $industry.', ';
+                }
+            }
+
             $this->session->set_userdata('first_name', $this->input->post('first_name'));
             $this->session->set_userdata('last_name', $this->input->post('last_name'));
             $this->session->set_userdata('email', $this->input->post('email'));
@@ -34,9 +44,16 @@ class Signup extends CI_Controller{
             $this->session->set_userdata('state', $this->input->post('state'));
             $this->session->set_userdata('zipcode', $this->input->post('zipcode'));
 
+
+            $this->session->set_userdata('top_3_locations', $this->input->post('top_3_locations'));
+            $this->session->set_userdata('industries', $industries);
+            $this->session->set_userdata('target_titles', $this->input->post('target_titles'));
+            $this->session->set_userdata('summary', $this->input->post('summary'));
+            $this->session->set_userdata('industry_facts', $this->input->post('industry_facts'));
+
             return redirect(base_url().'signup/pricing');
 
-            
+
         }else{
             $this->session->set_flashdata('first_name', $this->input->post('first_name'));
             $this->session->set_flashdata('last_name', $this->input->post('last_name'));
@@ -47,6 +64,12 @@ class Signup extends CI_Controller{
             $this->session->set_flashdata('city', $this->input->post('city'));
             $this->session->set_flashdata('state', $this->input->post('state'));
             $this->session->set_flashdata('zipcode', $this->input->post('zipcode'));
+
+            $this->session->set_userdata('top_3_locations', $this->input->post('top_3_locations'));
+            $this->session->set_userdata('target_titles', $this->input->post('target_titles'));
+            $this->session->set_userdata('summary', $this->input->post('summary'));
+            $this->session->set_userdata('industry_facts', $this->input->post('industry_facts'));
+
             $this->session->set_flashdata('failed', validation_errors());
 
             return redirect(base_url().'signup');
@@ -87,6 +110,13 @@ class Signup extends CI_Controller{
                 <p style='font-size:17px'>City: <strong><u>{$this->session->userdata('city')}</u></strong></p>
                 <p style='font-size:17px'>State: <strong><u>{$this->session->userdata('state')}</u></strong></p>
                 <p style='font-size:17px'>Zip Code: <strong><u>{$this->session->userdata('zipcode')}</u></strong></p>
+                <hr>
+                <p style='font-size:17px'>Top 3 Target Locations: <strong><u>{$this->session->userdata('top_3_locations')}</u></strong></p>
+                <p style='font-size:17px'>Target Titles: <strong><u>{$this->session->userdata('target_titles')}</u></strong></p>
+                <p style='font-size:17px'>Company Summary: <strong><u>{$this->session->userdata('summary')}</u></strong></p>
+                <p style='font-size:17px'>Industry Facts or Data: <strong><u>{$this->session->userdata('industry_facts')}</u></strong></p>
+                <hr>
+                <p style='font-size:17px'>Target Industries: <strong><u>{$this->session->userdata('industries')}</u></strong></p>
                 <hr>
                 <p>Please do not reply.</p>
             </html>
