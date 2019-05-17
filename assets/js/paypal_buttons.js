@@ -1,4 +1,5 @@
 
+// Basic Plan
 paypal.Button.render({
     // Configure environment
     env: 'production',
@@ -32,7 +33,7 @@ paypal.Button.render({
     onAuthorize: function (data, actions) {
         return actions.payment.execute().then(function () {
             window.alert('Thank you for your purchase! Click OK.');
-            window.location.href = "<?= base_url()?>signup/sendMail";
+            window.location.href = "http://signup.leadengine.live/signup/sendMail";
         });
     }
 }, '#paypal-button');
@@ -41,11 +42,7 @@ paypal.Button.render({
 
 
 
-
-
-
-
-
+// Pro Plan
 paypal.Button.render({
     // Configure environment
     env: 'production',
@@ -79,7 +76,7 @@ paypal.Button.render({
     onAuthorize: function (data, actions) {
         return actions.payment.execute().then(function () {
             window.alert('Thank you for your purchase! Click OK.');
-            window.location.href = "<?= base_url()?>signup/sendMail";
+            window.location.href = "http://signup.leadengine.live/signup/sendMail";
         });
     }
 }, '#paypal-button2');
