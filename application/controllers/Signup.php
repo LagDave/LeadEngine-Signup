@@ -97,7 +97,7 @@ class Signup extends CI_Controller{
         $this->email->subject('A user has signed up: '.$this->session->userdata('email'));
         $this->email->message("
             <html>
-                <img style='width:100%' align='center' src='http://leadengine.live/assets/images/wide_logo.png'>
+                <img style='width:100%' align='center' src='http://leadengine.live/home/assets/images/wide_logo.png'>
                 <br><br><br><br>
                 <h1 style='text-align:center'>Good Day, Daniel. A new User has signed up:<br>{$this->session->userdata('email')}</h1>
                 <hr>
@@ -129,7 +129,6 @@ class Signup extends CI_Controller{
     }
 
     public function success(){
-        
         $this->load->view('layouts/app', ['page_title'=>'LeadEngine | Success!', 'view'=>'pages/success_view']);
         
     }

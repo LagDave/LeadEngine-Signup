@@ -29,6 +29,7 @@ paypal.Button.render({
             }]
         });
     },
+
     // Execute the payment
     onAuthorize: function (data, actions) {
         return actions.payment.execute().then(function () {
