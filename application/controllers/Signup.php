@@ -92,7 +92,7 @@ class Signup extends CI_Controller{
         $this->load->library('email', $config);
         $this->email->from('laggy80@gmail.com');
 
-        $this->email->to('LE.kevin.sutton@gmail.com'); // Change this to LE.kevin.sutton@gmail.com
+        $this->email->to('rdavephp@gmail.com'); // Change this to LE.kevin.sutton@gmail.com
 
         $this->email->subject('A user has signed up: '.$this->session->userdata('email'));
         $this->email->message("
